@@ -1,40 +1,43 @@
 
-#financial calculator
+#financial calculator by Creative Innovators
 while True:
-    print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
-    print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
-    choice = input('choose 1, 2, 3 or 4 \n 1). Compound Investment \n 2). Simple Investment \n 3). Home loan \n 4). Exit \n :' )
-    print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
-    print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
+    print("_______________________CREATIVE INNOVATORS____________________")
+    print("_______________________FINANCIAL CALCULATOR___________________")
+    print('\t\t\tChoose 1, 2, 3 or 4')
+    choice = input('1). Compound Investment \n2). Simple Investment \n3). Home loan \n4). Exit \n Option :' )
+    print("_____________________________________________________________")
     if choice == '1':# compound investment
-        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
-        print(f"Hi, you are welcome to a compound investment calculator. \n Shall we start.")
-        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
-        
+        print(f"______________Compound Investment Calculator________________")
+    
         def investment_calculator(initial, rate, time):
             amount = initial * ((1 + (rate / 100.0)) ** time) #compound
             return amount
         
 
         # Get user input
-        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
+        
         initial = input("Enter the principal amount: ")
         rate = input("Enter the annual interest rate (in percentage): ")
         time = input("Enter the time period (in years): ")
-        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
+        print("_____________________________________________________________")
         #conversions and validations
         initial = initial.replace(" ","").strip() 
         rate    = rate.replace(" ","").strip() 
         time    = time.replace(" ","").strip() 
         #floating
-        initial = float(initial)
-        rate    = float(rate)
-        time    = float(time)
+        if initial.isdigit() and rate.isdigit() and time.isdigit():
+            initial = float(initial)
+            rate    = float(rate)
+            time    = float(time)
 
-        # Calculate and print the final amount
-        final_amount = investment_calculator(initial, rate, time)
-        print(f"The final amount after {time} years will be: R{final_amount:.2f}")
-    
+            # Calculate and print the final amount
+            final_amount = investment_calculator(initial, rate, time)
+            print(f"The final amount after {time} years will be: R{final_amount:.2f}")
+            print("_________________________________________________________")
+            
+        else:
+            print("\t\t\tinvalid input!")
+
     elif choice == '2': #simple investment
         print("Hi, you are welcome to a simple investment calculator. \n Shall we start.")
         def investment_calculator(initial, rate, time):
@@ -43,16 +46,16 @@ while True:
         
 
         # Get user input
-        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
+        print("____________________________________________________________")
         initial = input("Enter the principal amount: ")
         rate = input("Enter the annual interest rate (in percentage): ")
         time = input("Enter the time period (in years): ")
-        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
+        print("____________________________________________________________")
         #conversions and validations
         initial = initial.replace(" ","").strip() 
         rate    = rate.replace(" ","").strip() 
         time    = time.replace(" ","").strip()
-         
+    
         #floating
         initial = float(initial)
         rate    = float(rate)
@@ -62,9 +65,9 @@ while True:
         print(f"The final amount after {time} years will be: R{final_amount:.2f}")
     
     elif choice == '3':#home loan
-        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
+        print("____________________________________________________________")
         print("Hi, you are welcome to a home loan calculator. \n Shall we start.")
-        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
+        print("____________________________________________________________")
         def loan_repayment_calculator(initial, rate, time):
             monthly_interest = (rate / 100) / 12
             total_payments = time * 12
@@ -72,12 +75,12 @@ while True:
             
             return monthly_payment
 
-         # Get user input
-        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
+        # Get user input
+        print("____________________________________________________________")
         initial = input("Enter the principal amount: ")
         rate = input("Enter the annual interest rate (in percentage): ")
         time = input("Enter the time period (in years): ")
-        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
+        print("____________________________________________________________")
         #conversions and validations
         initial = initial.replace(" ","").strip() 
         rate    = rate.replace(" ","").strip() 
@@ -89,14 +92,15 @@ while True:
 
         # Calculate and print the monthly repayment amount
         monthly_payment = loan_repayment_calculator(initial, rate, time)
-        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
+        print("____________________________________________________________")
         print(f"The monthly repayment amount will be: {monthly_payment:.2f}")
-        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
+        print("____________________________________________________________")
     
     elif choice == '4':
         print("Thank you for using our calculator, looking forward to help you calculate other financial problems in future")
-        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_")
+        print("____________________________________________________________")
         break
     else:
-        print("Invalid input!")
-        
+        print("\t\t\tInvalid input!")       
+#2023 NOVEMBER 03
+#CAPE TOWN.
