@@ -16,7 +16,7 @@ while True:
 
         # Get user input
         
-        initial = input("Enter the principal amount: ")
+        initial = input("Enter the principal amount (initial amount): ")
         rate = input("Enter the annual interest rate (in percentage): ")
         time = input("Enter the time period (in years): ")
         print("_____________________________________________________________")
@@ -47,7 +47,7 @@ while True:
 
         # Get user input
         print("____________________________________________________________")
-        initial = input("Enter the principal amount: ")
+        initial = input("Enter the principal amount (initial amount):")
         rate = input("Enter the annual interest rate (in percentage): ")
         time = input("Enter the time period (in years): ")
         print("____________________________________________________________")
@@ -77,7 +77,7 @@ while True:
 
         # Get user input
         print("____________________________________________________________")
-        initial = input("Enter the principal amount: ")
+        initial = input("Enter the principal amount (initial amount): ")
         rate = input("Enter the annual interest rate (in percentage): ")
         time = input("Enter the time period (in years): ")
         print("____________________________________________________________")
