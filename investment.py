@@ -5,9 +5,9 @@ while True:
     print("_______________________FINANCIAL CALCULATOR___________________")
     print('\t\t\tChoose 1, 2, 3 or 4')
     choice = input('1). Compound Investment \n2). Simple Investment \n3). Home loan \n4). Exit \n Option :' )
-    print("_____________________________________________________________")
+    print("_____________________________________________________________\n")
     if choice == '1':# compound investment
-        print(f"______________Compound Investment Calculator________________")
+        print(f"______________Compound Investment Calculator________________\n")
     
         def investment_calculator(initial, rate, time):
             amount = initial * ((1 + (rate / 100)) ** time) #compound
@@ -15,30 +15,30 @@ while True:
         
         while True:
             # Get user input
-            initial = input("Enter the principal amount (initial amount): ")
+            initial = input("Enter the principal amount (initial amount): R")
             rate = input("Enter the annual interest rate (in percentage): ")
             time = input("Enter the time period (in years): ")
-            print("_____________________________________________________________")
+            print("_____________________________________________________________\n")
             #conversions and validations
             initial = initial.replace(" ","").strip() 
             rate    = rate.replace(" ","").strip() 
             time    = time.replace(" ","").strip() 
             #floating
             # if initial.isdigit() and rate.isdigit() and time.isdigit():
-            if initial.isdigit() and rate.isdigit() and time.isdigit():
+            if initial.replace(".","",1).isdigit() and rate.replace(".","",1).isdigit() <= 0 and time.replace(".","",1).isdigit() :
                 initial = float(initial)
                 rate    = float(rate)
                 time    = float(time)
                  # Calculate and print the final amount
                 final_amount = investment_calculator(initial, rate, time)
                 print(f"Investing R{initial} after {round(time)}years will be: R{final_amount:.2f}")
-                print("_________________________________________________________")
+                print("_________________________________________________________\n")
                 
             # else:
             #     print("\t\t\tinvalid input!")
             else:
                 print("\t\t\tInvalid input!") 
-                print("_____________________Test_______________________________________\n\n")  
+                print("____________________________________________________________\n\n")  
                 
 
            
