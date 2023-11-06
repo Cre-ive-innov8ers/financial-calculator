@@ -25,15 +25,19 @@ while True:
             time    = time.replace(" ","").strip() 
             #floating
             # if initial.isdigit() and rate.isdigit() and time.isdigit():
-            if initial.replace(".","",1).isdigit() and rate.replace(".","",1).isdigit() <= 0 and time.replace(".","",1).isdigit() :
+            if initial.replace(".","",1).isdigit() and rate.replace(".","",1).isdigit() and time.replace(".","",1).isdigit() :
                 initial = float(initial)
                 rate    = float(rate)
                 time    = float(time)
                  # Calculate and print the final amount
-                final_amount = investment_calculator(initial, rate, time)
-                print(f"Investing R{initial} after {round(time)}years will be: R{final_amount:.2f}")
-                print("_________________________________________________________\n")
-                
+                if rate <= 100: 
+                    final_amount = investment_calculator(initial, rate, time)
+                    print(f"Investing R{initial} after {round(time)}years will be: R{final_amount:.2f}")
+                    print("_________________________________________________________\n")
+                    break
+                else:
+                    print(f"Rate can not be more than 100%")
+                    print("_________________________________________________________\n")
             # else:
             #     print("\t\t\tinvalid input!")
             else:
