@@ -10,32 +10,38 @@ while True:
         print(f"______________Compound Investment Calculator________________")
     
         def investment_calculator(initial, rate, time):
-            amount = initial * ((1 + (rate / 100.0)) ** time) #compound
+            amount = initial * ((1 + (rate / 100)) ** time) #compound
             return amount
         
+        while True:
+            # Get user input
+            initial = input("Enter the principal amount (initial amount): ")
+            rate = input("Enter the annual interest rate (in percentage): ")
+            time = input("Enter the time period (in years): ")
+            print("_____________________________________________________________")
+            #conversions and validations
+            initial = initial.replace(" ","").strip() 
+            rate    = rate.replace(" ","").strip() 
+            time    = time.replace(" ","").strip() 
+            #floating
+            # if initial.isdigit() and rate.isdigit() and time.isdigit():
+            if initial.isdigit() and rate.isdigit() and time.isdigit():
+                initial = float(initial)
+                rate    = float(rate)
+                time    = float(time)
+                 # Calculate and print the final amount
+                final_amount = investment_calculator(initial, rate, time)
+                print(f"Investing R{initial} after {round(time)}years will be: R{final_amount:.2f}")
+                print("_________________________________________________________")
+                
+            # else:
+            #     print("\t\t\tinvalid input!")
+            else:
+                print("\t\t\tInvalid input!") 
+                print("_____________________Test_______________________________________\n\n")  
+                
 
-        # Get user input
-        initial = input("Enter the principal amount (initial amount): ")
-        rate = input("Enter the annual interest rate (in percentage): ")
-        time = input("Enter the time period (in years): ")
-        print("_____________________________________________________________")
-        #conversions and validations
-        initial = initial.replace(" ","").strip() 
-        rate    = rate.replace(" ","").strip() 
-        time    = time.replace(" ","").strip() 
-        #floating
-        # if initial.isdigit() and rate.isdigit() and time.isdigit():
-        initial = float(initial)
-        rate    = float(rate)
-        time    = float(time)
-
-        # Calculate and print the final amount
-        final_amount = investment_calculator(initial, rate, time)
-        print(f"The final amount after {time} years will be: R{final_amount:.2f}")
-        print("_________________________________________________________")
-            
-        # else:
-        #     print("\t\t\tinvalid input!")
+           
 
     elif choice == '2': #simple investment
         print("Hi, you are welcome to a simple investment calculator. \n Shall we start.")
@@ -97,9 +103,10 @@ while True:
     
     elif choice == '4':
         print("Thank you for using our calculator, looking forward to help you calculate other financial problems in future")
-        print("____________________________________________________________")
+        print("____________________________________________________________\n")
         break
     else:
-        print("\t\t\tInvalid input!")       
+        print("\t\t\tInvalid input!") 
+        print("____________________________________________________________\n\n")      
 #2023 NOVEMBER 03
 #CAPE TOWN.
