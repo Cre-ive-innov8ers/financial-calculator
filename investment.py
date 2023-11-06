@@ -15,7 +15,6 @@ while True:
         
 
         # Get user input
-        
         initial = input("Enter the principal amount (initial amount): ")
         rate = input("Enter the annual interest rate (in percentage): ")
         time = input("Enter the time period (in years): ")
@@ -25,18 +24,18 @@ while True:
         rate    = rate.replace(" ","").strip() 
         time    = time.replace(" ","").strip() 
         #floating
-        if initial.isdigit() and rate.isdigit() and time.isdigit():
-            initial = float(initial)
-            rate    = float(rate)
-            time    = float(time)
+        # if initial.isdigit() and rate.isdigit() and time.isdigit():
+        initial = float(initial)
+        rate    = float(rate)
+        time    = float(time)
 
-            # Calculate and print the final amount
-            final_amount = investment_calculator(initial, rate, time)
-            print(f"The final amount after {time} years will be: R{final_amount:.2f}")
-            print("_________________________________________________________")
+        # Calculate and print the final amount
+        final_amount = investment_calculator(initial, rate, time)
+        print(f"The final amount after {time} years will be: R{final_amount:.2f}")
+        print("_________________________________________________________")
             
-        else:
-            print("\t\t\tinvalid input!")
+        # else:
+        #     print("\t\t\tinvalid input!")
 
     elif choice == '2': #simple investment
         print("Hi, you are welcome to a simple investment calculator. \n Shall we start.")
