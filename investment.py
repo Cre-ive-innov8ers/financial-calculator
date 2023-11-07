@@ -1,3 +1,4 @@
+import math
 #financial calculator by Creative Innovators
 while True:
     print("\n\n____________________________________________CREATIVE INNOVATORS______________________________________________")
@@ -13,7 +14,12 @@ while True:
             if option == '1':#Compound
                 print(f"___________________________________Compound Investment Calculator___________________________________\n")
                 def compound_interest_calculator(initial, rate, time):
-                    amount = initial * ((1 + (rate / 100)) ** time) #compound
+                    # amount = initial * ((1 + (rate / 100)) ** time) #compound
+                    P =initial
+                    r=rate/1200
+                    t= time*12
+                    A = P* math.pow((1+r),t)
+                    amount = A
                     return amount
                 
                 while True:
@@ -30,10 +36,11 @@ while True:
                     rate = input("Enter the annual interest rate (in percentage): ")
                     rate= rate.replace(" ", "").strip()
                     while True:
-                        if rate.replace(".","",1).isdigit():
+                        if rate.replace(".","",1).isdigit() and float(rate)<= 100:
                             break
                         else:
-                            initial = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
+                            rate = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
+                            
 
                     time = input("Enter the time period (in years): ")
                     time = time.replace(" ", "").strip()
@@ -75,7 +82,12 @@ while True:
                 
                 print("Hi, you are welcome to a simple investment calculator. \n Shall we start.")
                 def simple_interest_calc(initial, rate, time):
-                    amount = initial * ((1 + ((rate*time) / 100))) #simple
+                   # amount = initial * ((1 + ((rate*time) / 100))) #simple
+                    P = initial
+                    t = time/1200
+                    r = rate*12
+                    A = P(1 + r * t)
+                    amount = A
                     return amount
                 
 
@@ -92,11 +104,11 @@ while True:
                     rate = input("Enter the annual interest rate (in percentage): ")
                     rate= rate.replace(" ", "").strip()
                     while True:
-                        if rate.replace(".","",1).isdigit():
+                        if rate.replace(".","",1).isdigit() and float(rate)<= 100:
                             break
                         else:
-                            initial = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
-
+                            rate = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
+                            
                     time = input("Enter the time period (in years): ")
                     time = time.replace(" ", "").strip()
                     print("____________________________________________________________________________________________________\n")
@@ -144,7 +156,7 @@ while True:
         print("Hi, you are welcome to a home loan calculator. \n Shall we start.")
         print("____________________________________________________________________________________________________")
         def loan_repayment_calculator(initial, rate, time):
-            monthly_interest = (rate / 100) / 12
+            monthly_interest = rate / 1200
             total_payments = time * 12
             monthly_payment = (initial * monthly_interest) / (1 - (1 + monthly_interest) ** -total_payments)
             
@@ -161,13 +173,13 @@ while True:
     
     
             rate = input("Enter the annual interest rate (in percentage): ")
+            rate= rate.replace(" ", "").strip()
             while True:
-                if rate.replace(".","",1).isdigit():
+                if rate.replace(".","",1).isdigit() and float(rate)<= 100:
                     break
                 else:
-                   rate = input("Invalid input!\nre-Enter the annual interest rate (in percentage): ")
-            
-                
+                    rate = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
+        
             time = input("Enter the time period (in years): ")
             print("____________________________________________________________________________________________________")
             while True:
