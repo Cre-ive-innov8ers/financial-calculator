@@ -3,90 +3,142 @@
 while True:
     print("\n\n____________________________________________CREATIVE INNOVATORS____________________________________")
     print("____________________________________________FINANCIAL CALCULATOR___________________________________")
-    print('\t\t\tChoose 1, 2, 3 or 4')
-    choice = input('1). Compound Investment \n2). Simple Investment \n3). Home loan \n4). Exit \n Option :' )
+    choice = input('1). Investment \n2). Home loan \n3). Exit \n(Choose 1, 2 or 3)\n____________________________________________________________________________________________________\n Option :' )
     print("____________________________________________________________________________________________________\n")
-    if choice == '1':# compound investment
-        print(f"___________________________________Compound Investment Calculator___________________________________\n")
-        
-        def compound_interest_calculator(initial, rate, time):
-            amount = initial * ((1 + (rate / 100)) ** time) #compound
-            return amount
-        
+
+    
+
+    if choice == '1':# Investment
         while True:
-            # Get user input
-            initial = input("Enter the principal amount (initial amount): R")
-            rate = input("Enter the annual interest rate (in percentage): ")
-            time = input("Enter the time period (in years): ")
-            print("____________________________________________________________________________________________________\n")
-            #conversions and validations
-            initial = initial.replace(" ","").strip() 
-            rate    = rate.replace(" ","").strip() 
-            time    = time.replace(" ","").strip() 
-            #floating
-            # if initial.isdigit() and rate.isdigit() and time.isdigit():
-            if initial.replace(".","",1).isdigit() and rate.replace(".","",1).isdigit() and time.replace(".","",1).isdigit() :
-                initial = float(initial)
-                rate    = float(rate)
-                time    = float(time)
-                 # Calculate and print the final amount
-                if rate <= 100: 
-                    final_amount = compound_interest_calculator(initial, rate, time)
-                    print(f"Investing R{initial} using compound interst after {round(time)}years will be: R{final_amount:.2f}")
+            option= input('1). Compound Investment \n2). Simple Investment \n____________________________________________________________________________________________________\n Option :' )
+            if option == '1':#Compound
+                print(f"___________________________________Compound Investment Calculator___________________________________\n")
+                def compound_interest_calculator(initial, rate, time):
+                    amount = initial * ((1 + (rate / 100)) ** time) #compound
+                    return amount
+                
+                while True:
+                    # Get user input
+
+                    initial = input("Enter the principal amount (initial amount): R")
+                    initial= initial.replace(" ", "").strip()
+                    while True:
+                        if initial.replace(".","",1).isdigit():
+                            break
+                        else:
+                            initial = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
+            
+                    rate = input("Enter the annual interest rate (in percentage): ")
+                    rate= rate.replace(" ", "").strip()
+                    while True:
+                        if rate.replace(".","",1).isdigit():
+                            break
+                        else:
+                            initial = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
+
+                    time = input("Enter the time period (in years): ")
+                    time = time.replace(" ", "").strip()
                     print("____________________________________________________________________________________________________\n")
-                    break
-                else:
-                    print(f"Rate can not be more than 100%")
-                    print("____________________________________________________________________________________________________\n")
-            # else:
-            #     print("\t\t\tinvalid input!")
-            else:
-                print("\t\t\tInvalid input!") 
-                print("____________________________________________________________________________________________________\n\n")  
+                    while True:
+                        if time.replace(".","",1).isdigit():
+                            break
+                        else:
+                            time = input("Invalid input!\nre-Enter the time period (in years): ")
+
+                    #conversions and validations
+                    initial = initial.replace(" ","").strip() 
+                    rate    = rate.replace(" ","").strip() 
+                    time    = time.replace(" ","").strip() 
+                    #floating
+                    # if initial.isdigit() and rate.isdigit() and time.isdigit():
+                    if initial.replace(".","",1).isdigit() and rate.replace(".","",1).isdigit() and time.replace(".","",1).isdigit() :
+                        initial = float(initial)
+                        rate    = float(rate)
+                        time    = float(time)
+                        # Calculate and print the final amount
+                        if rate <= 100: 
+                            final_amount = compound_interest_calculator(initial, rate, time)
+                            print(f"Investing R{initial} using compound interst after {round(time)}years will be: R{final_amount:.2f}")
+                            print("____________________________________________________________________________________________________\n")
+                            break
+                        else:
+                            print(f"Rate can not be more than 100%")
+                            print("____________________________________________________________________________________________________\n")
+                    # else:
+                    #     print("\t\t\tinvalid input!")
+                    else:
+                        print("\t\t\tInvalid input!") 
+                        print("____________________________________________________________________________________________________\n\n")  
+                        
+
+            
+            elif option=='2':
+                #simple investment
+                print("Hi, you are welcome to a simple investment calculator. \n Shall we start.")
+                def simple_interest_calc(initial, rate, time):
+                    amount = initial * ((1 + ((rate*time) / 100))) #simple
+                    return amount
                 
 
-           
+                # Get user input
+                while True:
+                    initial = input("Enter the principal amount (initial amount): R")
+                    initial= initial.replace(" ", "").strip()
+                    while True:
+                        if initial.replace(".","",1).isdigit():
+                            break
+                        else:
+                            initial = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
+            
+                    rate = input("Enter the annual interest rate (in percentage): ")
+                    rate= rate.replace(" ", "").strip()
+                    while True:
+                        if rate.replace(".","",1).isdigit():
+                            break
+                        else:
+                            initial = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
 
-    elif choice == '2': #simple investment
-        print("Hi, you are welcome to a simple investment calculator. \n Shall we start.")
-        def simple_interest_calc(initial, rate, time):
-            amount = initial * ((1 + ((rate*time) / 100))) #simple
-            return amount
-        
+                    time = input("Enter the time period (in years): ")
+                    time = time.replace(" ", "").strip()
+                    print("____________________________________________________________________________________________________\n")
+                    while True:
+                        if time.replace(".","",1).isdigit():
+                            break
+                        else:
+                            time = input("Invalid input!\nre-Enter the time period (in years): ")
 
-        # Get user input
-        while True:
-            # Get user input
-            initial = input("Enter the principal amount (initial amount): R")
-            rate = input("Enter the annual interest rate (in percentage): ")
-            time = input("Enter the time period (in years): ")
-            print("____________________________________________________________________________________________________\n")
-            #conversions and validations
-            initial = initial.replace(" ","").strip() 
-            rate    = rate.replace(" ","").strip() 
-            time    = time.replace(" ","").strip() 
-            #floating
-            # if initial.isdigit() and rate.isdigit() and time.isdigit():
-            if initial.replace(".","",1).isdigit() and rate.replace(".","",1).isdigit() and time.replace(".","",1).isdigit() :
-                initial = float(initial)
-                rate    = float(rate)
-                time    = float(time)
-                # Calculate and print the final amount
-                if rate <= 100: 
-                    final_amount = simple_interest_calc(initial, rate, time)
-                    print(f"Investing R{initial} using Simple interest after {round(time)}years will be: R{final_amount:.2f}")
                     print("____________________________________________________________________________________________________\n")
-                    break
-                else:
-                    print(f"Rate can not be more than 100%")
-                    print("____________________________________________________________________________________________________\n")
-            # else:
-            #     print("\t\t\tinvalid input!")
+                    #conversions and validations
+                    initial = initial.replace(" ","").strip() 
+                    rate    = rate.replace(" ","").strip() 
+                    time    = time.replace(" ","").strip() 
+                    #floating
+                    # if initial.isdigit() and rate.isdigit() and time.isdigit():
+                    if initial.replace(".","",1).isdigit() and rate.replace(".","",1).isdigit() and time.replace(".","",1).isdigit() :
+                        initial = float(initial)
+                        rate    = float(rate)
+                        time    = float(time)
+                        # Calculate and print the final amount
+                        if rate <= 100: 
+                            final_amount = simple_interest_calc(initial, rate, time)
+                            print(f"Investing R{initial} using Simple interest after {round(time)}years will be: R{final_amount:.2f}")
+                            print("____________________________________________________________________________________________________\n")
+                            break
+                        else:
+                            print(f"Rate can not be more than 100%")
+                            print("____________________________________________________________________________________________________\n")
+                    # else:
+                    #     print("\t\t\tinvalid input!")
+                    else:
+                        print("\t\t\tInvalid input!") 
+                        print("____________________________________________________________________________________________________\n\n")
+            
             else:
-                print("\t\t\tInvalid input!") 
-                print("____________________________________________________________________________________________________\n\n")
-    
-    elif choice == '3':#home loan
+                print("____________________________________________________________________________________________________\n")
+                print('Invalid Input')
+                print("____________________________________________________________________________________________________\n")
+        ###########################################################################################################################################
+    elif choice == '2':#home loan
         print("____________________________________________________________________________________________________")
         print("Hi, you are welcome to a home loan calculator. \n Shall we start.")
         print("____________________________________________________________________________________________________")
@@ -105,9 +157,23 @@ while True:
                     break
                 else:
                     initial = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
+    
+    
             rate = input("Enter the annual interest rate (in percentage): ")
+            while True:
+                if rate.replace(".","",1).isdigit():
+                    break
+                else:
+                   rate = input("Invalid input!\nre-Enter the annual interest rate (in percentage): ")
+            
+                
             time = input("Enter the time period (in years): ")
             print("____________________________________________________________________________________________________")
+            while True:
+                if time.replace(".","",1).isdigit():
+                    break
+                else:
+                    initial = input("Invalid input!\nre-Enter the time period (in years): ")
             
             #conversions and validations
             initial = initial.replace(" ","").strip() 
@@ -135,7 +201,7 @@ while True:
                 print("____________________________________________________________________________________________________\n\n")
                 
         
-    elif choice == '4':
+    elif choice == '3':
         print("Thank you for using our calculator, looking forward to help you calculate other financial problems in future")
         print("____________________________________________________________________________________________________\n")
         break
