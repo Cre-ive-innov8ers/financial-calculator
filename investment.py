@@ -10,7 +10,7 @@ while True:
 
     if choice == '1':# Investment
         while True:
-            option= input('1). Compound Investment \n2). Simple Investment \n____________________________________________________________________________________________________\n Option :' )
+            option= input('1). Compound Investment \n2). Simple Investment \n3). Exit \n____________________________________________________________________________________________________\n Option :' )
             if option == '1':#Compound
                 print(f"___________________________________Compound Investment Calculator___________________________________\n")
                 def compound_interest_calculator(initial, rate, time):
@@ -72,8 +72,8 @@ while True:
                         
 
             
-            elif option=='2':
-                #simple investment
+            elif option=='2':#simple investment
+                
                 print("Hi, you are welcome to a simple investment calculator. \n Shall we start.")
                 def simple_interest_calc(initial, rate, time):
                     amount = initial * ((1 + ((rate*time) / 100))) #simple
@@ -132,7 +132,9 @@ while True:
                     else:
                         print("\t\t\tInvalid input!") 
                         print("____________________________________________________________________________________________________\n\n")
-            
+            elif option == '3':
+                print("Thank you for visiting the CI bank")
+                break
             else:
                 print("____________________________________________________________________________________________________\n")
                 print('Invalid Input')
