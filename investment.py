@@ -100,6 +100,11 @@ while True:
             # Get user input
             print("____________________________________________________________________________________________________")
             initial = input("Enter the principal amount (initial amount): ")
+            while True:
+                if initial.replace(".","",1).isdigit():
+                    break
+                else:
+                    initial = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
             rate = input("Enter the annual interest rate (in percentage): ")
             time = input("Enter the time period (in years): ")
             print("____________________________________________________________________________________________________")
