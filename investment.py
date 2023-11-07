@@ -96,28 +96,39 @@ while True:
             monthly_payment = (initial * monthly_interest) / (1 - (1 + monthly_interest) ** -total_payments)
             
             return monthly_payment
-
-        # Get user input
-        print("____________________________________________________________________________________________________")
-        initial = input("Enter the principal amount (initial amount): ")
-        rate = input("Enter the annual interest rate (in percentage): ")
-        time = input("Enter the time period (in years): ")
-        print("____________________________________________________________________________________________________")
-        #conversions and validations
-        initial = initial.replace(" ","").strip() 
-        rate    = rate.replace(" ","").strip() 
-        time    = time.replace(" ","").strip() 
-        #floating
-        initial = float(initial)
-        rate    = float(rate)
-        time    = float(time)
-
-        # Calculate and print the monthly repayment amount
-        monthly_payment = loan_repayment_calculator(initial, rate, time)
-        print("____________________________________________________________________________________________________")
-        print(f"The monthly repayment amount will be: {monthly_payment:.2f}")
-        print("____________________________________________________________________________________________________")
-    
+        while True:
+            # Get user input
+            print("____________________________________________________________________________________________________")
+            initial = input("Enter the principal amount (initial amount): ")
+            rate = input("Enter the annual interest rate (in percentage): ")
+            time = input("Enter the time period (in years): ")
+            print("____________________________________________________________________________________________________")
+            
+            #conversions and validations
+            initial = initial.replace(" ","").strip() 
+            rate    = rate.replace(" ","").strip() 
+            time    = time.replace(" ","").strip()
+            
+            if initial.replace(".","",1).isdigit() and rate.replace(".","",1).isdigit() and time.replace(".","",1).isdigit() :
+                #floating
+                initial = float(initial)
+                rate    = float(rate)
+                time    = float(time)
+                if rate <=100 :
+                    # Calculate and print the monthly repayment amount
+                    monthly_payment = loan_repayment_calculator(initial, rate, time)
+                    print("____________________________________________________________________________________________________")
+                    print(f"The monthly repayment amount will be: R{monthly_payment:.2f}")
+                    print("____________________________________________________________________________________________________")
+                    break
+                else:
+                    print(f"Rate can not be more than 100%")
+                    print("____________________________________________________________________________________________________\n")
+            else:
+                print("\t\t\tInvalid input!") 
+                print("____________________________________________________________________________________________________\n\n")
+                
+        
     elif choice == '4':
         print("Thank you for using our calculator, looking forward to help you calculate other financial problems in future")
         print("____________________________________________________________________________________________________\n")
