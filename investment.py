@@ -119,6 +119,7 @@ while True:
                     monthly_payment = loan_repayment_calculator(initial, rate, time)
                     print("____________________________________________________________________________________________________")
                     print(f"The monthly repayment amount will be: R{monthly_payment:.2f}")
+                    print(f"You will pay R{monthly_payment:.2f} per month for taking a home loan of R{initial}  for {round(time)} years with an interest of {rate}%")
                     print("____________________________________________________________________________________________________")
                     break
                 else:
