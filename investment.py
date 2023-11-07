@@ -131,9 +131,9 @@ while True:
                     #     print("\t\t\tinvalid input!")
                     else:
                         print("\t\t\tInvalid input!") 
-                        print("____________________________________________________________________________________________________\n\n")
+                        print("_______________________________________________________________________________________________________________1\n\n")
             elif option == '3':
-                print("Thank you for visiting the CI bank")
+                print("Financial success is not about how much you earn, but how much you keep, invest wisely, and let it grow over time")
                 break
             else:
                 print("____________________________________________________________________________________________________\n")
