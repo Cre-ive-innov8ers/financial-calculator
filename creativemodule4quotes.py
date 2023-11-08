@@ -1,5 +1,6 @@
 #myModule
 import random
+
 def rand_quote():
     my_rand = ["The stock market is filled with individuals who know the price of everything, but the value of nothing.","In investing, what is comfortable is rarely profitable.",
 
