@@ -84,17 +84,17 @@ while True:
             
             elif option=='2':#simple investment
                 print(f"___________________________________Simple Investment Calculator___________________________________\n")
-                def simple_interest_calc(initial, rate, time):
+                def simple_interest_calculator(initial, rate, time):
                     P = initial
-                    t = time/12
                     r = rate/100
-                    A = P(1 + r * t)
+                    t = time/12
+                    A = P*(1+r*t)
                     amount = A
                     return amount
                 
-
-                # Get user input
                 while True:
+                    # Get user input
+
                     initial = input("Enter the principal amount (initial amount): R")
                     initial= initial.replace(" ", "").strip()
                     while True:
@@ -111,16 +111,16 @@ while True:
                         else:
                             rate = input("Invalid input!\nRe-Enter the annual interest rate (in percentage): ")
                             
-                    time = input("Enter the time period (in month(s)): ")
+
+                    time = input("Enter the time period (in months): ")
                     time = time.replace(" ", "").strip()
                     print("____________________________________________________________________________________________________\n")
                     while True:
                         if time.replace(".","",1).isdigit():
                             break
                         else:
-                            time = input("Invalid input!\nRe-Enter the time period (in month(s)): ")
+                            time = input("Invalid input!\nRe-Enter the time period (in years): ")
 
-                    print("____________________________________________________________________________________________________\n")
                     #conversions and validations
                     initial = initial.replace(" ","").strip() 
                     rate    = rate.replace(" ","").strip() 
@@ -133,12 +133,11 @@ while True:
                         time    = float(time)
                         # Calculate and print the final amount
                         if rate <= 100: 
-                            final_amount = simple_interest_calc(initial, rate, time)
-                            print(f"Investing R{initial} using Simple interest after {round(time)} month(s) will be: R{final_amount:.2f}")
-                            print("____________________________________________________________________________________________________")
+                            final_amount = simple_interest_calculator(initial, rate, time)
+                            print(f"Investing R{initial} using simple interst after {round(time)} month(s) will be: R{final_amount:.2f}")
+                            print("____________________________________________________________________________________________________\n")
                             creativemodule4quotes.rand_quote()
                             print("____________________________________________________________________________________________________\n")
-                            
                             break
                         else:
                             print(f"Rate can not be more than 100%")
@@ -147,7 +146,7 @@ while True:
                     #     print("\t\t\tinvalid input!")
                     else:
                         print("\t\t\tInvalid input!") 
-                        print("_______________________________________________________________________________________________________________1\n\n")
+                        print("____________________________________________________________________________________________________\n\n")  
             elif option == '3':
                 print("Financial success is not about how much you earn, but how much you keep, invest wisely, and let it grow over time")
                 break
