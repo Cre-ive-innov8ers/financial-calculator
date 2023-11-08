@@ -32,7 +32,7 @@ while True:
                         if initial.replace(".","",1).isdigit():
                             break
                         else:
-                            initial = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
+                            initial = input("Invalid input!\nRe-Enter the principal amount (initial amount): ")
             
                     rate = input("Enter the annual interest rate (in percentage): ")
                     rate= rate.replace(" ", "").strip()
@@ -40,7 +40,7 @@ while True:
                         if rate.replace(".","",1).isdigit() and float(rate)<= 100:
                             break
                         else:
-                            rate = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
+                            rate = input("Invalid input!\nRe-Enter the annual interest rate (in percentage): ")
                             
 
                     time = input("Enter the time period (in months): ")
@@ -50,7 +50,7 @@ while True:
                         if time.replace(".","",1).isdigit():
                             break
                         else:
-                            time = input("Invalid input!\nre-Enter the time period (in years): ")
+                            time = input("Invalid input!\nRe-Enter the time period (in years): ")
 
                     #conversions and validations
                     initial = initial.replace(" ","").strip() 
@@ -100,7 +100,7 @@ while True:
                         if initial.replace(".","",1).isdigit():
                             break
                         else:
-                            initial = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
+                            initial = input("Invalid input!\nRe-Enter the principal amount (initial amount): ")
             
                     rate = input("Enter the annual interest rate (in percentage): ")
                     rate= rate.replace(" ", "").strip()
@@ -108,7 +108,7 @@ while True:
                         if rate.replace(".","",1).isdigit() and float(rate)<= 100:
                             break
                         else:
-                            rate = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
+                            rate = input("Invalid input!\nRe-Enter the annual interest rate (in percentage): ")
                             
                     time = input("Enter the time period (in month(s)): ")
                     time = time.replace(" ", "").strip()
@@ -117,7 +117,7 @@ while True:
                         if time.replace(".","",1).isdigit():
                             break
                         else:
-                            time = input("Invalid input!\nre-Enter the time period (in month(s)): ")
+                            time = input("Invalid input!\nRe-Enter the time period (in month(s)): ")
 
                     print("____________________________________________________________________________________________________\n")
                     #conversions and validations
@@ -173,7 +173,7 @@ while True:
                 if initial.replace(".","",1).isdigit():
                     break
                 else:
-                    initial = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
+                    initial = input("Invalid input!\nRe-Enter the principal amount (initial amount): ")
     
     
             rate = input("Enter the annual interest rate (in percentage): ")
@@ -182,7 +182,7 @@ while True:
                 if rate.replace(".","",1).isdigit() and float(rate)<= 100:
                     break
                 else:
-                    rate = input("Invalid input!\nre-Enter the principal amount (initial amount): ")
+                    rate = input("Invalid input!\nRe-Enter the annual interest rate (in percentage): ")
         
             time = input("Enter the time period (in month(s)): ")
             print("____________________________________________________________________________________________________")
@@ -190,7 +190,7 @@ while True:
                 if time.replace(".","",1).isdigit():
                     break
                 else:
-                    initial = input("Invalid input!\nre-Enter the time period (in month(s)): ")
+                    initial = input("Invalid input!\nRe-Enter the time period (in month(s)): ")
             
             #conversions and validations
             initial = initial.replace(" ","").strip() 
