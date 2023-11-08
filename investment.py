@@ -1,7 +1,7 @@
 import math
 #financial calculator by Creative Innovators
 while True:
-    print("\n\n____________________________________________CREATIVE INNOVATORS______________________________________________")
+    print("____________________________________________CREATIVE INNOVATORS______________________________________________")
     print("____________________________________________FINANCIAL CALCULATOR_________________________________________________")
     choice = input('1). Investment \n2). Home loan \n3). Exit \n(Choose 1, 2 or 3)\n____________________________________________________________________________________________________\n Option :' )
     print("____________________________________________________________________________________________________\n")
@@ -14,7 +14,6 @@ while True:
             if option == '1':#Compound
                 print(f"___________________________________Compound Investment Calculator___________________________________\n")
                 def compound_interest_calculator(initial, rate, time):
-                    # amount = initial * ((1 + (rate / 100)) ** time) #compound
                     P =initial
                     r=rate/1200
                     t= time*12
@@ -64,7 +63,7 @@ while True:
                         # Calculate and print the final amount
                         if rate <= 100: 
                             final_amount = compound_interest_calculator(initial, rate, time)
-                            print(f"Investing R{initial} using compound interst after {round(time)}years will be: R{final_amount:.2f}")
+                            print(f"Investing R{initial} using compound interst after {round(time)} years will be: R{final_amount:.2f}")
                             print("____________________________________________________________________________________________________\n")
                             break
                         else:
@@ -82,7 +81,6 @@ while True:
                 
                 print("Hi, you are welcome to a simple investment calculator. \n Shall we start.")
                 def simple_interest_calc(initial, rate, time):
-                   # amount = initial * ((1 + ((rate*time) / 100))) #simple
                     P = initial
                     t = time/1200
                     r = rate*12
@@ -132,7 +130,7 @@ while True:
                         # Calculate and print the final amount
                         if rate <= 100: 
                             final_amount = simple_interest_calc(initial, rate, time)
-                            print(f"Investing R{initial} using Simple interest after {round(time)}years will be: R{final_amount:.2f}")
+                            print(f"Investing R{initial} using Simple interest after {round(time)} years will be: R{final_amount:.2f}")
                             print("____________________________________________________________________________________________________\n")
                             break
                         else:
