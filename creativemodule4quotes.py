@@ -33,9 +33,6 @@ def rand_quote():
 
     "The first rule of investment is don't lose money; the second rule is don't forget the first rule."]
     y = len(my_rand)
-    x =  random.randint(1, y)
-    print("___________________________________________________________________________________________________________________________________________________________\n")
-    print(my_rand[x])
-    print("___________________________________________________________________________________________________________________________________________________________")
-
-rand_quote()
+    x =  random.randint(0, y)
+    quote = my_rand[x]
+    print(quote)
