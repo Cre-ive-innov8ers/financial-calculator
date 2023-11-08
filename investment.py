@@ -156,7 +156,7 @@ while True:
         def loan_repayment_calculator(initial, rate, time):
             monthly_interest = rate / 1200
             total_payments = time * 12
-            monthly_payment = (initial * monthly_interest) / (1 - (1 + monthly_interest) ** -total_payments)
+            monthly_payment = (initial * monthly_interest) / (1 - math.pow((1 + monthly_interest),-total_payments))
             
             return monthly_payment
         while True:
