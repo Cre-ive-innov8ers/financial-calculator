@@ -11,14 +11,15 @@ while True:
     
 
     if choice == '1':# Investment
+        print(f"___________________________________Investment Calculator___________________________________\n")
         while True:
             option= input('1). Compound Investment \n2). Simple Investment \n3). Exit \n____________________________________________________________________________________________________\n Option :' )
             if option == '1':#Compound
                 print(f"___________________________________Compound Investment Calculator___________________________________\n")
                 def compound_interest_calculator(initial, rate, time):
                     P =initial
-                    r=rate/1200
-                    t= time*12
+                    r=rate/100
+                    t= time/12
                     A = P* math.pow((1+r),t)
                     amount = A
                     return amount
@@ -82,11 +83,11 @@ while True:
 
             
             elif option=='2':#simple investment
-                print("Hi, you are welcome to a simple investment calculator. \n Shall we start.")
+                print(f"___________________________________Simple Investment Calculator___________________________________\n")
                 def simple_interest_calc(initial, rate, time):
                     P = initial
-                    t = time/1200
-                    r = rate*12
+                    t = time/12
+                    r = rate/100
                     A = P(1 + r * t)
                     amount = A
                     return amount
@@ -157,7 +158,7 @@ while True:
         ###########################################################################################################################################
     elif choice == '2':#home loan
         print("____________________________________________________________________________________________________")
-        print("Hi, you are welcome to a home loan calculator. \n Shall we start.")
+        print(f"_______________________________Home Loan Monthly Payment Calculator_______________________________\n")
         print("____________________________________________________________________________________________________")
         def loan_repayment_calculator(initial, rate, time):
             monthly_interest = rate / 1200
