@@ -156,7 +156,9 @@ while True:
                                 print("\t\t\tInvalid input!") 
                                 print("____________________________________________________________________________________________________\n\n")  
                     elif option == '3':
-                        print("Financial success is not about how much you earn, but how much you keep, invest wisely, and let it grow over time")
+                        print("____________________________________________________________________________________________________\n")
+                        creativemodule4quotes.rand_quote()
+                        print("____________________________________________________________________________________________________\n")
                         break
                     else:
                         print("____________________________________________________________________________________________________\n")
@@ -472,5 +474,5 @@ while True:
         break	
     else:#error choice
         print("Invalid input!") 
-        #2023 NOVEMBER 03
+        #2023 NOVEMBER 09 for 10 Novemebr 2023
         #CAPE TOWN.
