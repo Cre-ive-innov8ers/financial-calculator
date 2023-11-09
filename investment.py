@@ -50,7 +50,7 @@ while True:
                                 if initial.replace(".","",1).isdigit():
                                     break
                                 else:
-                                    initial = input("Invalid input!\nRe-Enter the principal amount (initial amount): ")
+                                    initial = input("Invalid input!\nRe-Enter the principal amount (initial amount):R ")
                     
                             rate = input("Enter the annual interest rate (in percentage): ")
                             rate= rate.replace(" ", "").strip()
@@ -121,7 +121,7 @@ while True:
                                 if initial.replace(".","",1).isdigit():
                                     break
                                 else:
-                                    initial = input("Invalid input!\nRe-Enter the principal amount (initial amount): ")
+                                    initial = input("Invalid input!\nRe-Enter the principal amount (initial amount): R")
                     
                             rate = input("Enter the annual interest rate (in percentage): ")
                             rate= rate.replace(" ", "").strip()
@@ -198,7 +198,7 @@ while True:
                         if initial.replace(".","",1).isdigit():
                             break
                         else:
-                            initial = input("Invalid input!\nRe-Enter the principal amount (initial amount): ")
+                            initial = input("Invalid input!\nRe-Enter the principal amount (initial amount): R")
             
             
                     rate = input("Enter the annual interest rate (in percentage): ")
@@ -357,7 +357,7 @@ while True:
                                 if initial.replace(".","",1).isdigit():
                                     break
                                 else:
-                                    initial = input("Invalid input!\nRe-Enter the principal amount (initial amount): ")
+                                    initial = input("Invalid input!\nRe-Enter the principal amount (initial amount): R")
                     
                             rate = input("Enter the annual interest rate (in percentage): ")
                             rate= rate.replace(" ", "").strip()
@@ -429,7 +429,7 @@ while True:
                         if initial.replace(".","",1).isdigit():
                             break
                         else:
-                            initial = input("Invalid input!\nRe-Enter the principal amount (initial amount): ")
+                            initial = input("Invalid input!\nRe-Enter the principal amount (initial amount): R")
             
             
                     rate = input("Enter the annual interest rate (in percentage): ")
@@ -446,7 +446,7 @@ while True:
                         if time.replace(".","",1).isdigit():
                             break
                         else:
-                            initial = input("Invalid input!\nRe-Enter the time period (in year(s)): ")
+                            time = input("Invalid input!\nRe-Enter the time period (in year(s)): ")
                     
                     #conversions and validations
                     initial = initial.replace(" ","").strip() 
@@ -462,7 +462,6 @@ while True:
                             # Calculate and print the monthly repayment amount
                             monthly_payment = loan_repayment_calculator(initial, rate, time)
                             print("____________________________________________________________________________________________________")
-                            print(f"The monthly repayment amount will be: R{monthly_payment:.2f}")
                             print(f"You will pay R{monthly_payment:.2f} per month for taking a home loan of R{initial}  for {round(time)} year(s) with an interest of {rate}%")
                             print("____________________________________________________________________________________________________\n")
                             creativemodule4quotes.rand_quote()
@@ -487,6 +486,7 @@ while True:
                 print("____________________________________________________________________________________________________\n\n")    
     elif period == '3':
         creativemodule4quotes.rand_quote()
+        print("\n\nThan you for using Creative innovators calculator")
         print("____________________________________________________________________________________________________\n\n\n")
         break	
     else:#error choice
