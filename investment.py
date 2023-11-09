@@ -9,7 +9,6 @@ while True:
     period = input("Welcome to the financial calculator.\nplease be advised to that this calculator takes in the period(n) in either months or years  \nchoose either(1,2 or 3)\n1). Month\n2). Year\n3). Exit\n_____________________________________________________________________________________________________\nOption : ")
     period = period.replace(" ","").strip()
     print("_____________________________________________________________________________________________________\n")
-    # print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
     ##################################################################################################################
     if period == '1':#Period in Months
         while True:
@@ -231,7 +230,6 @@ while True:
                             # Calculate and print the monthly repayment amount
                             monthly_payment = loan_repayment_calculator(initial, rate, time)
                             print("_____________________________________________________________________________________________________")
-                            print(f"The monthly repayment amount will be: R{monthly_payment:.2f}")
                             print(f"You will pay R{monthly_payment:.2f} per month for taking a home loan of R{initial}  for {round(time)} month(s) with an interest of {rate}%")
                             print("_____________________________________________________________________________________________________\n")
                             creativemodule4quotes.rand_quote()
@@ -246,7 +244,6 @@ while True:
                         
                 
             elif choice == '3':
-                print("Thank you for using our calculator, looking forward to help you calculate other financial problems in future")
                 print("____________________________________________________________________________________________________\n")
                 creativemodule4quotes.rand_quote()
                 print("____________________________________________________________________________________________________\n")
@@ -476,7 +473,6 @@ while True:
                         
                 
             elif choice == '3':
-                print("Thank you for using our calculator, looking forward to help you calculate other financial problems in future")
                 print("____________________________________________________________________________________________________\n")
                 creativemodule4quotes.rand_quote()
                 print("____________________________________________________________________________________________________\n")
@@ -486,7 +482,7 @@ while True:
                 print("____________________________________________________________________________________________________\n\n")    
     elif period == '3':
         creativemodule4quotes.rand_quote()
-        print("\n\nThan you for using Creative innovators calculator")
+        print("\n\nThank you for using Creative innovators calculator")
         print("____________________________________________________________________________________________________\n\n\n")
         break	
     else:#error choice
