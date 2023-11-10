@@ -18,7 +18,7 @@ def rand_quote():
 
     "The best investment you can make is in yourself.",
 
-    "Investing should be more like watching paint dry or watching grass grow. If you want excitement, \ntake $800 and go to Las Vegas.",
+    "Investing should be more like watching paint dry or watching grass grow. If you want excitement, \ntake R800 and go to Mojo Market.",
 
     "The time of maximum pessimism is the best time to buy, and the time of maximum optimism is the \nbest time to sell.",
 
@@ -32,7 +32,10 @@ def rand_quote():
 
     "I will tell you the secret to getting rich on Wall Street. You try to be greedy when others are \nfearful. And you try to be fearful when others are greedy.",
 
-    "The first rule of investment is don't lose money; the second rule is don't forget the first rule."]
+    "The first rule of investment is don't lose money; the second rule is don't forget the first rule.",
+    
+    "Investing can be a great way to build wealth over time, but it's important to approach it with \ncareful consideration, especially if you have a limited monthly income of R5000."]
+    
     y = len(my_rand)
     x =  random.randint(0, y)
     quote = my_rand[x]
